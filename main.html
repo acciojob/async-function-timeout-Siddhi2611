@@ -1,19 +1,45 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Message Delay</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <!-- the entire body must be written by student -->
-    <form onsubmit="return false">
-      <input type="text" id="text" placeholder="Text" />
-      <input type="number" id="delay" placeholder="Delay" />
-      <button type="button" id="btn">Submit</button>
-    </form>
+    <div class="container">
+      <h1>Async Delay Message</h1>
 
-    <div id="output"></div>
+      <!-- Input Form -->
+      <form id="message-form" onsubmit="return false;">
+        <div class="form-group">
+          <label for="text">Message:</label>
+          <input
+            type="text"
+            id="text"
+            placeholder="Enter your message"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="delay">Delay (ms):</label>
+          <input
+            type="number"
+            id="delay"
+            placeholder="Enter delay in milliseconds"
+            min="0"
+            required
+          />
+        </div>
+
+        <button type="button" id="btn">Submit</button>
+      </form>
+
+      <!-- Output Section -->
+      <div id="output" class="output"></div>
+    </div>
 
     <script type="text/javascript" src="./script.js"></script>
   </body>
